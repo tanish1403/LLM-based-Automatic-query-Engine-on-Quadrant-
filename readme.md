@@ -1,22 +1,23 @@
-<h1 align="center">Neural Style Transfer using CNN:</h1>
+<h1 align="center">LLM based query project on Quadrant:</h1>
+## Demo images
+<br /><br />
 
+![Demo working](demo.jpg)
 
-## Follow the steps 
+<br /><br />
+## Follow the steps
 ```bash
-!wget http://images.cocodataset.org/zips/test2017.zip
-!mkdir './dataset'
-!unzip -q ./test2017.zip -d './dataset'
+git clone "your git link"
 ```
 ```bash
-!mkdir ./checkpoints
-!wget -q -O 'best_model.pth' https://www.dropbox.com/s/7xvmmbn1bx94exz/best_model.pth?dl=1
-!mv best_model.pth ./checkpoints
+pip install -r requirements.txt
 ```
+## Update the API keys inside database_query.py
+openai.api_key = 'your_openai_api_key'
+qdrant_api_key = 'your_qdrant_api_key'
+cohere_api_key = 'your_cohere_api_key'
 
 
 ```bash
-!mkdir ./content
-!mkdir ./style
-!wget -q https://github.com/myelinfoundry-2019/challenge/raw/master/japanese_garden.jpg -P './content'
-!wget -q https://github.com/myelinfoundry-2019/challenge/raw/master/picasso_selfportrait.jpg -P './style'
+python database_query.py
 ```
